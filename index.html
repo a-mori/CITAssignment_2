@@ -83,12 +83,13 @@
         }
         
         #bio {
-            position: absolute;
-            left: 500px;
-            bottom: -335px;
+            position: relative;
+            left: 500;
+            bottom: 0;
+            top = 0;
         }
         
-        .img {
+        #img {
             margin: 20px 0 20px 20px;
         }
         
@@ -114,6 +115,16 @@
     </style>
     
     <body>
+        <button id='button'>Delete Div</button>
+        
+        <button id='button_2'>Make Div 1 Bigger</button>
+        
+        <button id='button_3'>Button 3</button>
+        
+        <button id='button_4'>Button 4</button>
+        
+        <button id='button_5'>Click</button>
+        
         <div id='banner'>
             <h3 id='tagline'>Welcome!</h3>
         </div>
@@ -145,17 +156,79 @@
             </div>
         </div>
         
-        <div class='box'>
+        <div class='box' id='bioDiv'>
             <h3 id='bio'>My name is Alex Mori. I was born in Vancouver, but was raised in
                          Kamloops. I chose to go to BCIT mostly because of the quality of
                          education that I would receive here. I only have a younger sister,
                          who is only a year younger than I am. Currently, I have no computer
                          experience except for some basic java. That concludes my short bio.</h3>
-            <img class='img' src='https://s-media-cache-ak0.pinimg.com/564x/80/e1/87/80e1877a12f8b7b9fdb48e60105bcde2.jpg'/>
+            <img id='img' src='https://s-media-cache-ak0.pinimg.com/564x/80/e1/87/80e1877a12f8b7b9fdb48e60105bcde2.jpg'/>
         </div>
         
         <div id='banner3'>
             <h3 id='end_tagline'>Thank You For Visiting</h3>
         </div>
+        
+        <script language='javascript' text='text/javascript'>
+            var button = document.getElementById('button');
+            var button_2 = document.getElementById("button_2");
+            var button_3 = document.getElementById("button_3");
+            var button_4 = document.getElementById("button_4");
+            var button_5 = document.getElementById("button_5");
+            
+            var bannerDiv = document.getElementById("banner");
+            var banner3Div = document.getElementById("banner3");
+            var bioDiv = document.getElementById("bioDiv");
+            var banner2Div = document.getElementById("banner_2");
+            
+            var tagline = document.getElementById("tagline");
+            var endTagline = document.getElementById("end_tagline");
+            
+            var imgImg = document.getElementsByClassName("img");
+            
+            var height = 50;
+            var width = 100;
+            var r = 0;
+            var g = 0;
+            var b = 0;
+            var a = 0;
+            var b = 0;
+            
+            button.onclick = function() {
+                bannerDiv.style.width = '0';
+                bannerDiv.style.height = '0';
+                tagline.style.top = '-900px';
+                height = 0;
+                width = 0;
+            }
+            
+            button_2.onclick = function() {
+                bannerDiv.style.height = height+'px';
+                bannerDiv.style.width = width+'px';
+                tagline.style.top = '90px';
+                height = height + 50;
+                width = width + 60;
+                bannerDiv.style.backgroundImage = 'url(https://placekitten.com/2000/7000)';
+            }
+            
+            button_3.onclick = function() {
+                bioDiv.style.backgroundColor = "rgb("+r+", "+g+", "+b+")";
+                r = Math.round(Math.random()*255);
+                g = Math.round(Math.random()*255);
+                b = Math.round(Math.random()*255);
+            }
+            
+            button_4.onclick = function() {
+                banner3Div.style.backgroundImage = "url(https://placekitten.com/"+a+"/"+b+")";
+                a = Math.round(Math.random()*2000);
+                b = Math.round(Math.random()*2000);
+            }
+            
+            button_5.onclick = function() {
+                banner2Div.style.width = '0';
+                banner2Div.style.height = '0';
+                banner2Div.style.top = '-900px';
+            }
+        </script>
     </body>
 </html>
