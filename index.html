@@ -2,6 +2,14 @@
 <html>
     <head>
         <title>Business Card</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     
     <style>
@@ -9,226 +17,369 @@
             margin: 0px;
         }
         
-        #banner {
-            background-image: url(http://www.canadarugbyleague.com/wp-content/uploads/2015/12/o-CANADA-FLAG-facebook.jpg);
-            background-repeat: no-repeat;
-            width: 100vw;
-            height: 300px;
-            position: relative;
-            background-position: center center;
-            background-size: cover;
-        }
-        
         #tagline {
-            position: absolute;
-            top: 90px;
-            bottom: 90px;
-            left: 450px;
-            right: 400px;
-            color: yellow;
-            font-size: 25px;
+            width: 25vw;
+            top: 4vh;
+            left: 40vw;
+            right: 45vw;
+            color: #FFF;
+            font-size: 8vh;
+            position: relative;
         }
         
-        .ava {
-            border-radius: 100px;
-            position: absolute;
-            height: auto;
+        #end-tagline {
+            width: 25vw;
+            top: 4vh;
+            left: 40vw;
             right: 45vw;
-            bottom: 250px;
-            width: 100px;
-            margin: 0 0 0 500px;
+            color: #FFF;
+            font-size: 8vh;
+            position: relative;
+        }
+        
+        #top {
+            height: 25vh;
+            width: 98.6vw;
+            background-image: url(http://wallpapercave.com/wp/crp9UAu.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            left: -2vw;
+            top: -3vh;
+        }
+        
+        #bottom {
+            height: 35vh;
+            width: 98.6vw;
+            background-image: url(http://www.imagestowallpapers.com/wp-content/uploads/2015/12/Background-Image-CSS5.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            left: -2vw;
+            top: -6vh;
+        }
+        
+        #avaHolder {
+            width: 20vh;
+            height: auto;
+            top: -4vh;
+            left: 48vw;
+            position: relative;
+        }
+        
+        #ava {
+            background-image: url(http://calligraphyalphabet.org/1234/wp-content/uploads/old-english-calligraphy-alphabet-a.jpg);
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 10vh;
+            width: 10vh;
+            border-radius: 100%;
         }
         
         #name {
+            font-size: 3vh;
             position: absolute;
-            top: 50px;
-            bottom: 200px;
-            right: 400px;
-            left: 450px;
-            color: goldenrod;
-            font-size: 25px;
+            left: -1vw;
+            color: #FFF;
         }
         
-        #banner_2 {
-            background-image: url(http://assets.rmcloud.com/shared-images/local_info/kamloops-valley_2.jpg);
-            background-repeat: no-repeat;
-            width: 100vw;
-            height: 300px;
-            position: relative;
+        #middle {
+            width: 98.6vw;
+            height: 35vh;
+            background-image: url(http://all4desktop.com/data_images/original/4238051-background.jpg);
+            background-size: cover;
             background-position: center center;
-            background-size: cover; 
+            background-repeat: no-repeat;
+            position: relative;
+            left: -2vw;
+            top: -3vh;
         }
         
-        .box {
-            background-color: red;
+        #grid {
             width: 100vw;
             height: auto;
+            background-color: #BBB;
+            position: relative;
+            left: -2vw;
+            top: -3vh;
         }
         
         .portfolio {
-            margin: 20px 22px 20px 22px;
-            display: inline-block;
-            width: 150px;
-            height: 130px;
-            background-color: aqua;
+            width: 18vw;
+            margin: 1vw;
+            height: 20vh;
         }
         
         .abs {
-            width: 75px;
-            height: 25px;
-            background-color: orange;
             position: relative;
-            left: 0px;
-            top: 0px;
+            width: auto;
+            height: 20%;
+            background-color: #EEE;
+        }
+        
+        #img1 {
+            background-image: url(http://baconmockup.com/200/200);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #img2 {
+            background-image: url(http://lorempixel.com/200/200/sports);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+        
+        #img3 {
+            background-image: url(http://placekitten.com/200/200);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+        
+        #img4 {
+            background-image: url(http://placebear.com/200/200);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+        
+        #img5 {
+            background-image: url(http://fillmurray.com/g/200/200);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+        
+        #bioDiv {
+            width: 100vw;
+            height: 47vh;
+            background-color: #BBB;
+            position: relative;
+            left: -2vw;
+            top: -3vh;
+        }
+        
+        #me {
+            width: 20vw;
+            height: 40vh;
+            top: 2vh;
+            left: -55vw;
+            position: relative;
+            background-image: url(../Pictures/S51839TB201559_p_2.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
         
         #bio {
             position: relative;
-            left: 500;
-            bottom: 0;
-            top = 0;
+            height: 30vh;
+            width: 55vw;
+            font-size: 3vh;
+            left: 34vw;
+            top: 10vh;
         }
         
-        #img {
-            margin: 20px 0 20px 20px;
+        @media only screen and (max-width: 700px) and (min-width: 500px) {
+            #end-tagline {
+                font-size: 5vh;
+            }
+            
+            #bio {
+                font-size: 2vh;
+            }
         }
         
-        #end_tagline {
-            position: absolute;
-            top: 90px;
-            bottom: 90px;
-            right: 430px;
-            left: 458px;
-            color: yellow;
-            font-size: 25px;
+        @media only screen and (max-width: 500px) and (min-width: 340px) {
+            #bio {
+                font-size: 2vh;
+            }
+            
+            #me {
+                width: 35vw;
+            }
+            
+            #tagline {
+                font-size: 6vh;
+                left: 34vw;
+            }
+            
+            #end-tagline {
+                font-size: 5vh;
+                left: 34vw;
+            }
+            
+            #name {
+                font-size: 2vh;
+            }
+            
+            #ava {
+                height: 8vh;
+                width: 8vh;
+            }
+            
+            #avaHolder {
+                width: 15vh;
+            }
+            
+            .abs {
+                font-size: 1.7vh;
+            }
+            
+            .portfolio {
+                width: 22vw;
+            }
+            
+            #top {
+                left: -3.2vw;
+                top: -3.2vh;
+            }
+            
+            #middle {
+                left: -3.2vw;
+                top: -3.2vh;
+            }
+            
+            #bottom {
+                left: -3.1vw;
+                top: -6.4vh;
+            }
+            
+            #bioDiv {
+                top: -3.2vh;
+            }
+            
+            #grid {
+                top: -3.2vh;
+            }
         }
         
-        #banner3 {
-            background-image: url(http://www.canadarugbyleague.com/wp-content/uploads/2015/12/o-CANADA-FLAG-facebook.jpg);
-            background-repeat: no-repeat;
-            width: 100vw;
-            height: 300px;
-            position: relative;
-            background-position: center center;
-            background-size: cover; 
+        @media only screen and (max-width: 340px) {
+            #me {
+                width: 34vw;
+            }
+            
+            #bio {
+                font-size: 2vh;
+                top: 0;
+            }
+            
+            #tagline {
+                font-size: 4vh;
+                left: 30vw;
+            }
+            
+            #end-tagline {
+                font-size: 4vh;
+                left: 30vw;
+            }
+            
+            #name {
+                font-size: 2vh;
+                left: -3vw;
+            }
+            
+            #ava {
+                height: 6vh;
+                width: 6vh;
+            }
+            
+            #avaHolder {
+                width: 15vh;
+                top: -3vh;
+            }
+            
+            .abs {
+                font-size: 1.5vh;
+            }
+            
+            .portfolio {
+                width: 30vw;
+            }
+            
+            #bottom {
+                left: -4.45vw;
+                top: -6.5vh;
+            }
+            
+            #middle {
+                left: -4.45vw;
+                top: -3.3vh;
+            }
+            
+            #top {
+                left: -4.45vw;
+                top: -3.3vh;
+            }
+            
+            #bioDiv {
+                top: -3.3vh;
+            }
+            
+            #grid {
+                top: -3.3vh;
+            }
         }
     </style>
     
     <body>
-        <button id='button'>Delete Div</button>
-        
-        <button id='button_2'>Make Div 1 Bigger</button>
-        
-        <button id='button_3'>Button 3</button>
-        
-        <button id='button_4'>Button 4</button>
-        
-        <button id='button_5'>Click</button>
-        
-        <div id='banner'>
-            <h3 id='tagline'>Welcome!</h3>
-        </div>
-        
-        <div id='banner_2'>
-            <h3 id='name'>Alex Mori</h3>
-            <img class='ava' src="http://calligraphyalphabet.org/1234/wp-content/uploads/old-english-calligraphy-alphabet-a.jpg" />
-        </div>
-        
-        <div class='box'>
-            <div class='portfolio'>
-                <div class='abs'>hello</div>
+        <div class="container-fluid">
+            <div id='top'>
+                <h3 id='tagline'>Welcome</h3>
             </div>
             
-            <div class='portfolio'>
-                <div class='abs'>hello</div>
+            <div id='middle'>
+                <div id='avaHolder'>
+                    <div id='ava'></div>
+                    <h3 id='name'>Alex Mori</h3>
+                </div>
             </div>
             
-            <div class='portfolio'>
-                <div class='abs'>hello</div>
+            <div id="grid" class="row">
+                <div id="img1" class="col-lg-2 col-md-2 col-sm-4 col-xs-4 portfolio">
+                    <div class="abs">Image 1</div>
+                </div>
+                
+                <div id="img2" class="col-lg-2 col-md-2 col-sm-4 col-xs-4 portfolio">
+                    <div class="abs">Image 2</div>
+                </div>
+                
+                <div id="img3" class="col-lg-2 col-md-2 col-sm-4 col-xs-4 portfolio">
+                    <div class="abs">Image 3</div>
+                </div>
+                
+                <div id="img4" class="col-lg-2 col-md-2 col-sm-4 col-xs-4 portfolio">
+                    <div class="abs">Image 4</div>
+                </div>
+                
+                <div id="img5" class="col-lg-2 col-md-2 col-sm-4 col-xs-4 portfolio">
+                    <div class="abs">Image 5</div>
+                </div>
             </div>
             
-            <div class='portfolio'>
-                <div class='abs'>hello</div>
-            </div>
-            
-            <div class='portfolio'>
-                <div class='abs'>hello</div>
-            </div>
-        </div>
-        
-        <div class='box' id='bioDiv'>
-            <h3 id='bio'>My name is Alex Mori. I was born in Vancouver, but was raised in
+            <div id="bioDiv" class='row'>
+                <h4 id="bio" class="col-lg-8 col-md-8 col-sm-10 col-xs-10">My name is Alex Mori. I was born in            Vancouver, but was raised in
                          Kamloops. I chose to go to BCIT mostly because of the quality of
                          education that I would receive here. I only have a younger sister,
                          who is only a year younger than I am. Currently, I have no computer
-                         experience except for some basic java. That concludes my short bio.</h3>
-            <img id='img' src='https://s-media-cache-ak0.pinimg.com/564x/80/e1/87/80e1877a12f8b7b9fdb48e60105bcde2.jpg'/>
-        </div>
-        
-        <div id='banner3'>
-            <h3 id='end_tagline'>Thank You For Visiting</h3>
+                         experience except for some basic java. That concludes my short bio.</h4>
+                
+                <div id='me' class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+            </div>
+            
+            <div id="bottom">
+                    <h3 id="end-tagline">Thank You For Visiting!</h3>
+            </div>
         </div>
         
         <script language='javascript' text='text/javascript'>
-            var button = document.getElementById('button');
-            var button_2 = document.getElementById("button_2");
-            var button_3 = document.getElementById("button_3");
-            var button_4 = document.getElementById("button_4");
-            var button_5 = document.getElementById("button_5");
+            var topDiv = document.getElementById('top');
             
-            var bannerDiv = document.getElementById("banner");
-            var banner3Div = document.getElementById("banner3");
-            var bioDiv = document.getElementById("bioDiv");
-            var banner2Div = document.getElementById("banner_2");
-            
-            var tagline = document.getElementById("tagline");
-            var endTagline = document.getElementById("end_tagline");
-            
-            var imgImg = document.getElementsByClassName("img");
-            
-            var height = 50;
-            var width = 100;
-            var r = 0;
-            var g = 0;
-            var b = 0;
-            var a = 0;
-            var b = 0;
-            
-            button.onclick = function() {
-                bannerDiv.style.width = '0';
-                bannerDiv.style.height = '0';
-                tagline.style.top = '-900px';
-                height = 0;
-                width = 0;
-            }
-            
-            button_2.onclick = function() {
-                bannerDiv.style.height = height+'px';
-                bannerDiv.style.width = width+'px';
-                tagline.style.top = '90px';
-                height = height + 50;
-                width = width + 60;
-                bannerDiv.style.backgroundImage = 'url(https://placekitten.com/2000/7000)';
-            }
-            
-            button_3.onclick = function() {
-                bioDiv.style.backgroundColor = "rgb("+r+", "+g+", "+b+")";
-                r = Math.round(Math.random()*255);
-                g = Math.round(Math.random()*255);
-                b = Math.round(Math.random()*255);
-            }
-            
-            button_4.onclick = function() {
-                banner3Div.style.backgroundImage = "url(https://placekitten.com/"+a+"/"+b+")";
-                a = Math.round(Math.random()*2000);
-                b = Math.round(Math.random()*2000);
-            }
-            
-            button_5.onclick = function() {
-                banner2Div.style.width = '0';
-                banner2Div.style.height = '0';
-                banner2Div.style.top = '-900px';
-            }
         </script>
     </body>
 </html>
